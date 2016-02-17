@@ -39,14 +39,13 @@ RSpec.configure do |config|
     # `true` in RSpec 4.
     mocks.verify_partial_doubles = true
   end
-
-
+  
   # Shorten the backtrace
-  config.backtrace_exclusion_patterns = [
+   config.backtrace_exclusion_patterns = [
     /\/lib\d*\/ruby\//,
     /bin\//,
     /gems/,
     /spec\/spec_helper\.rb/,
     /lib\/rspec\/(core|expectations|matchers|mocks)/
-    ]
+  ]
 end
