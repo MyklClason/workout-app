@@ -3,8 +3,11 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Bootstrap
+gem 'bootstrap-sass', '~>3.3.4.1'
+gem 'autoprefixer-rails', '~>5.2.0'
+# Use devise for authentication
+gem 'devise', '~>3.5.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -33,6 +36,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  # Use rspec for BDD testing
+  gem 'rspec-rails', '3.2.3'
+  # Use guard-rspec for testing automation.
+  gem 'guard-rspec', require:false
+  gem 'spring-commands-rspec'
+
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end
@@ -45,3 +57,11 @@ group :development do
   gem 'spring'
 end
 
+group :test do
+  gem 'capybara', '2.4.4'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
