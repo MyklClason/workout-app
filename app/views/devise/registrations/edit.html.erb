@@ -1,0 +1,77 @@
+<h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<%= form_for(resource, as: resource_name, :html => {class:"form-horizonal", role: "form"},
+    url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-group">
+    <div class="control-label col-md-3">
+      <%= f.label :email %><br />
+    </div>
+    <div class="col-md-9">
+      <%= f.email_field :email, class: 'form-control', autofocus: true %>
+    </div>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="form-group">
+    <div class="control-label col-md-3">
+      <%= f.label :password %>
+    </div>
+    <div class="col-md-9">
+      <%= f.password_field :password, class:'form-control',
+      autocomplete: "off" %> <i>(leave blank if you don't want to change it)</i><br />
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="control-label col-md-3">
+      <%= f.label :password_confirmation %>
+    </div>
+    <div class="col-md-9">
+      <%= f.password_field :password_confirmation, class:'form-control', autocomplete: "off" %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="control-label col-md-3">
+      <%= f.label :password %>
+    </div>
+    <div class="col-md-9">
+      <%= f.password_field :password, class:'form-control',
+          autocomplete: "off" %> <i>(we need your current password to confirm your changes)</i><br />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-md-offset-3 col-md-9">
+      <%= f.submit "Update", class: 'btn btn-primary btn-lg' %>
+    </div>
+  </div>
+<% end %>
+
+<div class="col-md-offset-4 col-md-4" align="center">
+  <%= button_to "Back", :back, class: 'btn btn-primary btn-lg' %>
+</div>
+
+<hr>
+
+<div class="row ">
+  <div class="col-md-offset-4 col-md-4">
+    <div class="bg-danger cancel-account" align="center">
+      <h3 align="center">Unhappy with your account?</h3>
+
+       <%= button_to "Cancel my account", registration_path(resource_name),
+          class: 'btn btn-danger btn-lg', data: { confirm: "Are you sure?" },
+          method: :delete %>
+    </div>
+
+  </div>
+</div>
+
