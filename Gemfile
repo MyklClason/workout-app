@@ -7,7 +7,7 @@ gem 'rails', '4.2.5'
 gem 'bootstrap-sass', '~>3.4.1'
 gem 'autoprefixer-rails', '~>5.2.0'
 # Use devise for authentication
-gem 'devise', '~>3.5.1'
+gem 'devise', '~>4.7.1'
 # Date Picker (Related)
 gem 'jquery-ui-rails', '5.0.5'
 # Use SCSS for stylesheets
