@@ -4,10 +4,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Bootstrap
-gem 'bootstrap-sass', '~>3.3.4.1'
+gem 'bootstrap-sass', '~>3.4.1'
 gem 'autoprefixer-rails', '~>5.2.0'
 # Use devise for authentication
-gem 'devise', '~>3.5.1'
+gem 'devise', '~>4.7.1'
 # Date Picker (Related)
 gem 'jquery-ui-rails', '5.0.5'
 # Use SCSS for stylesheets
