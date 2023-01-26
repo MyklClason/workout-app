@@ -9,7 +9,7 @@ gem 'autoprefixer-rails', '~>5.2.0'
 # Use devise for authentication
 gem 'devise', '~>4.7.1'
 # Date Picker (Related)
-gem 'jquery-ui-rails', '5.0.5'
+gem 'jquery-ui-rails', '6.0.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
